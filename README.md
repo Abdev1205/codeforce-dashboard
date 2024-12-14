@@ -1,50 +1,64 @@
-# React + TypeScript + Vite
+# Codeforces Contest Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![image](https://github.com/user-attachments/assets/f1e3a573-5c1e-49a7-a6c5-72e0ce92ba03)
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## Introduction
+The **Codeforces Contest Dashboard** is a user-friendly web application that displays upcoming and past Codeforces contests in a structured and visually appealing manner. This project integrates Codeforces API to fetch contest details and provides advanced features like adding contests to a calendar, detailed contest insights, and dynamic data visualizations.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Visit the live project: [https://codeforce-dashboard.vercel.app/](https://codeforce-dashboard.vercel.app/)
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+https://github.com/user-attachments/assets/600e6c50-c4e4-4150-8129-1749292b84c4
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+---
+
+## Features
+
+- **Contest List**: Displays a list of upcoming and past contests with their types, times, and status in a responsive table format.
+- **Contest Details**: Redirects to an internal contest-specific page showing:
+  - Contest details (name, duration, type, etc.).
+  - Join Contest button.
+  - Add to Calendar functionality (using Calendar API).
+- **Interactive Graphs**: Contest statistics and related data displayed using dynamic graphs (powered by Recharts), updated based on user-provided filters.
+- **Like Button**: Users can like a contest, enhancing interaction.
+- **Responsive Design**: Mobile-friendly and optimized for all devices.
+- **Deployed on Vercel**: High-performance deployment for seamless user experience.
+
+---
+
+## Tech Stack
+
+- **Frontend**: React.js, TypeScript, ShadCN
+- **Styling**: Tailwind CSS
+- **API Integration**: Codeforces API, Calendar API
+- **Data Visualization**: Recharts
+- **Deployment**: Vercel
+
+---
+
+
+
+## Usage
+
+1. **Contest List Page**:
+   - View a list of all Codeforces contests with details such as name, type, start time, and duration.
+   - Click on a contest to view its details.
+
+2. **Contest Details Page**:
+   - View detailed information about a specific contest.
+   - Join the contest using the "Join Contest" button (redirects to Codeforces).
+   - Add the contest to your calendar (via Calendar API).
+
+3. **Filters and Graphs**:
+   - Apply filters to view contests based on types or duration.
+   - View dynamic graphs of contest stats using Recharts.
+
+---
+
+
+
